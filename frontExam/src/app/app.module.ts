@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
-import { PersonaComponent } from './persona/persona.component';
 import{SubcategoriaComponent} from './subcategoria/subcategoria.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PanelModule } from 'primeng/panel';
@@ -26,7 +25,6 @@ import { SubcategoriaService } from './service/Subcategoria.service';
 @NgModule({
   declarations: [
     AppComponent,
-    PersonaComponent,
     SubcategoriaComponent
   ],
   imports: [
