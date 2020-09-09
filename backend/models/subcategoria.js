@@ -3,9 +3,11 @@ const sql = require('../util/database.js');
 
 
 const SubCategoria = function (SubCategoria) {
+  this.cod_categoria = SubCategoria.cod_categoria;
+  this.cod_Sub_Categoria =SubCategoria.cod_Sub_Categoria;
   this.nombre = SubCategoria.nombre;
   this.descripcion = SubCategoria.descripcion;
-  this.fechaCreacion = SubCategoria.fechaCreacion;
+  this.fecha_creacion = SubCategoria.fecha_creacion;
 }
 SubCategoria.create = (newSubCategoria, result) => {
   sql.query("INSERT INTO SubCategoria SET ?", newSubCategoria, (err, res) => {
@@ -20,7 +22,7 @@ SubCategoria.create = (newSubCategoria, result) => {
 };
 
 SubCategoria.getAll = (cod_categoria,result) => {
-  sql.query(`select sc.COD_CATEGORIA,sc.NOMBRE,sc.FECHA_CREACION FROM subcategoria sc
+  sql.query(`select sc.COD_SUB_CATEGORIA,sc.NOMBRE,sc.FECHA_CREACION FROM subcategoria sc
   INNER JOIN categoria c
   on sc.COD_CATEGORIA = c.COD_CATEGORIA
   where c.COD_CATEGORIA=${cod_categoria}`, (err, res) => {

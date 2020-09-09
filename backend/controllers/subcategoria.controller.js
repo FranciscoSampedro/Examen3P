@@ -8,6 +8,7 @@ exports.create = (req, res) => {
     }
     const subcategoria = new subCategoria({
         cod_categoria: req.body.cod_categoria,
+        cod_sub_categoria: req.body.cod_sub_categoria,
         nombre: req.body.nombre,
         descripcion: req.body.descripcion,
         fecha_creacion: req.body.fecha_creacion,

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { PersonaComponent } from './persona/persona.component';
+import{SubcategoriaComponent} from './subcategoria/subcategoria.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PanelModule } from 'primeng/panel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,14 +17,17 @@ import { ButtonModule } from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
-import {ConfirmationService} from 'primeng/api'
+import {ConfirmationService} from 'primeng/api';
+import { SubcategoriaService } from './service/Subcategoria.service';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonaComponent
+    PersonaComponent,
+    SubcategoriaComponent
   ],
   imports: [
     BrowserModule,
